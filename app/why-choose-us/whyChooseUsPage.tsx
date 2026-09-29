@@ -4,57 +4,48 @@ import Link from "next/link";
 import Image from "next/image";
 import { CheckCircle2, Sparkles, ShieldCheck } from "lucide-react";
 
-import heroImg from "../../public/why_choose_us_hero.png";
-import expertImg from "../../public/ex.png";
-import clientImg from "../../public/cc.png";
-import innovationImg from "../../public/ino.png";
-import globalReachImg from "../../public/gr.png";
-import provenImg from "../../public/pe.png";
-import agileImg from "../../public/Am.png";
-import techImg from "../../public/t.png";
-import globalStandardsImg from "../../public/gsl.png";
 import ContactBox from "@/components/contactBox";
 import { motion } from "framer-motion";
 
 export default function WhyChooseUsPage() {
   const features = [
     {
-      image: expertImg,
+      image: "/ex.png",
       title: "Expert Team",
       description: "Skilled professionals with industry-leading expertise",
     },
     {
-      image: clientImg,
+      image: "/cc.png",
       title: "Client-Centric Approach",
       description: "Solutions tailored to your unique business needs",
     },
     {
-      image: innovationImg,
+      image: "/ino.png",
       title: "Innovation-Driven",
       description: "Leveraging the latest technologies for future-ready results",
     },
     {
-      image: globalReachImg,
+      image: "/gr.png",
       title: "Global Reach, Local Impact",
       description: "Serving clients across borders with precision and care.",
     },
     {
-      image: provenImg,
+      image: "/pe.png",
       title: "Proven Expertise",
       description: "Experienced team with a track record of successful projects.",
     },
     {
-      image: agileImg,
+      image: "/Am.png",
       title: "Agile Methodology",
       description: "Flexible, efficient, and client-focused development.",
     },
     {
-      image: techImg,
+      image: "/t.png",
       title: "24/7 Technical Support",
       description: "Reliable maintenance and assistance",
     },
     {
-      image: globalStandardsImg,
+      image: "/gsl.png",
       title: "Global Standards, Local Relevance",
       description: "Solutions designed for international markets with localized support.",
     },
@@ -75,7 +66,7 @@ export default function WhyChooseUsPage() {
               >
                 <div className="relative overflow-hidden rounded-3xl border border-gray-200 bg-white p-3 shadow-xl">
                   <Image
-                    src={heroImg}
+                    src="/why_choose_us_hero.png"
                     alt="Team collaboration"
                     width={800}
                     height={600}

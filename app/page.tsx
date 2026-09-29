@@ -21,20 +21,14 @@ import { motion } from "framer-motion";
 
 import ClientLogosMarquee from "@/components/ClientLogosMarquee";
 import AwardSplashScreen from "@/components/AwardSplashScreen";
-import teamCollabImage from "./../public/Team_collaboration.png";
-import aboutUsImage from "./../public/about_us_hero.png";
-import aimlImage from "./../public/ai_ml.png";
-import webDevImage from "./../public/web_dev.png";
-import mobileAppDevImage from "./../public/mobile_app_dev.png";
-import cloudImage from "./../public/cloud_and_devops.png";
 
 const images = [
-  teamCollabImage,
-  aboutUsImage,
-  aimlImage,
-  webDevImage,
-  mobileAppDevImage,
-  cloudImage,
+  "/Team_collaboration.png",
+  "/about_us_hero.png",
+  "/ai_ml.png",
+  "/web_dev.png",
+  "/mobile_app_dev.png",
+  "/cloud_and_devops.png",
 ];
 
 export default function Home() {
@@ -107,7 +101,7 @@ export default function Home() {
         className="w-full py-16 sm:py-20 md:py-24 bg-cover bg-center transition-all duration-1000 ease-in-out relative border-b border-gray-100"
         id="services"
         style={{
-          backgroundImage: `url(${images[currentImage].src})`,
+          backgroundImage: `url(${images[currentImage]})`,
         }}
       >
         {/* Blur Overlay */}
@@ -224,7 +218,7 @@ export default function Home() {
             >
               <div className="relative overflow-hidden rounded-3xl border border-gray-200 bg-white p-3 shadow-xl group hover:shadow-2xl transition-all duration-300">
                 <Image
-                  src={teamCollabImage}
+                  src="/Team_collaboration.png"
                   alt="Team collaboration"
                   width={1000}
                   height={750}
@@ -325,7 +319,7 @@ export default function Home() {
       {/* Preload slider images */}
       <div className="hidden">
         {images.map((img, index) => (
-          <Image key={index} src={img.src} alt={`Preload ${index}`} width={100} height={100} priority />
+          <Image key={index} src={img} alt={`Preload ${index}`} width={100} height={100} priority />
         ))}
       </div>
 

@@ -4,11 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { Sparkles, Target, Users } from "lucide-react";
 
-import heroImg from "../../public/About us image 2.jpg";
-import innovationImg from "../../public/i.png";
-import reliableImg from "../../public/rs.png";
-import scalableImg from "../../public/ss.png";
-import transformativeImg from "../../public/ts.png";
 import ContactBox from "@/components/contactBox";
 import AchievementsSection from "@/components/AchievementsSection";
 import { motion } from "framer-motion";
@@ -37,7 +32,7 @@ export default function AboutUsPage() {
               >
                 <div className="relative overflow-hidden rounded-3xl border border-gray-200 bg-white p-3 shadow-xl group hover:shadow-2xl transition-all duration-300">
                   <Image
-                    src={heroImg}
+                    src="/About us image 2.jpg"
                     alt="About Global Pearl Ventures"
                     width={1000}
                     height={750}
@@ -101,7 +96,7 @@ export default function AboutUsPage() {
                 className="group relative overflow-hidden rounded-3xl border border-gray-200 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-200 hover:shadow-xl"
               >
                 <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 ring-1 ring-blue-500/20">
-                  <Image src={innovationImg} alt="Innovation" width={32} height={32} />
+                  <Image src="/i.png" alt="Innovation" width={32} height={32} />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Innovation</h3>
                 <p className="text-sm leading-relaxed text-gray-600">
@@ -118,7 +113,7 @@ export default function AboutUsPage() {
                 className="group relative overflow-hidden rounded-3xl border border-gray-200 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-teal-200 hover:shadow-xl"
               >
                 <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-teal-50 ring-1 ring-teal-500/20">
-                  <Image src={reliableImg} alt="Reliable Solutions" width={32} height={32} />
+                  <Image src="/rs.png" alt="Reliable Solutions" width={32} height={32} />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Reliable Solutions</h3>
                 <p className="text-sm leading-relaxed text-gray-600">
@@ -135,7 +130,7 @@ export default function AboutUsPage() {
                 className="group relative overflow-hidden rounded-3xl border border-gray-200 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-purple-200 hover:shadow-xl"
               >
                 <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-50 ring-1 ring-purple-500/20">
-                  <Image src={scalableImg} alt="Scalable Solutions" width={32} height={32} />
+                  <Image src="/ss.png" alt="Scalable Solutions" width={32} height={32} />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Scalable Solutions</h3>
                 <p className="text-sm leading-relaxed text-gray-600">
@@ -152,7 +147,7 @@ export default function AboutUsPage() {
                 className="group relative overflow-hidden rounded-3xl border border-gray-200 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-emerald-200 hover:shadow-xl"
               >
                 <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-50 ring-1 ring-emerald-500/20">
-                  <Image src={transformativeImg} alt="Transformative Solutions" width={32} height={32} />
+                  <Image src="/ts.png" alt="Transformative Solutions" width={32} height={32} />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Transformative Solutions</h3>
                 <p className="text-sm leading-relaxed text-gray-600">
