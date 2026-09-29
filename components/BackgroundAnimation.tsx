@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useState, useMemo } from "react"
-import { motion } from "framer-motion"
+import { motion, Transition } from "framer-motion"
 
 export default function TechBackgroundAnimation() {
   const [isMobile, setIsMobile] = useState(false);
@@ -118,7 +118,7 @@ export default function TechBackgroundAnimation() {
       }
     };
 
-    // Animations
+    // Animations with explicit Transition return types
     const currentAnimations = isMobile ? {
       large: {
         animate: (item: any) => ({
@@ -126,11 +126,11 @@ export default function TechBackgroundAnimation() {
           y: [`0%`, `${item.offsetY}%`, `0%`],
           scale: [1, 1.03, 1]
         }),
-        transition: (duration: number, delay: number) => ({
+        transition: (duration: number, delay: number): Transition => ({
           duration: duration,
           delay: delay,
           repeat: Infinity,
-          ease: "easeInOut" as const
+          ease: "easeInOut"
         })
       },
       medium: {
@@ -138,11 +138,11 @@ export default function TechBackgroundAnimation() {
           x: [`0%`, `${item.offsetX * 1.3}%`, `0%`],
           y: [`0%`, `${item.offsetY * 1.3}%`, `0%`]
         }),
-        transition: (duration: number, delay: number) => ({
+        transition: (duration: number, delay: number): Transition => ({
           duration: duration,
           delay: delay,
           repeat: Infinity,
-          ease: "linear" as const
+          ease: "linear"
         })
       },
       small: {
@@ -150,11 +150,11 @@ export default function TechBackgroundAnimation() {
           x: [`0%`, `${item.offsetX * 1.6}%`, `0%`],
           y: [`0%`, `${item.offsetY * 1.6}%`, `0%`]
         }),
-        transition: (duration: number, delay: number) => ({
+        transition: (duration: number, delay: number): Transition => ({
           duration: duration,
           delay: delay,
           repeat: Infinity,
-          ease: "easeInOut" as const
+          ease: "easeInOut"
         })
       }
     } : {
@@ -165,11 +165,11 @@ export default function TechBackgroundAnimation() {
           rotate: item.isCircle ? [0, 0] : [0, item.rotation, 0, -item.rotation, 0],
           scale: [1, 1.05, 0.95, 1]
         }),
-        transition: (duration: number, delay: number) => ({
+        transition: (duration: number, delay: number): Transition => ({
           duration: duration,
           delay: delay,
           repeat: Infinity,
-          ease: "easeInOut" as const
+          ease: "easeInOut"
         })
       },
       medium: {
@@ -178,11 +178,11 @@ export default function TechBackgroundAnimation() {
           y: [`0%`, `${item.offsetY * 1.4}%`, `0%`],
           rotate: item.isCircle ? [0, 0] : [0, item.rotation * 3, 0, -item.rotation * 3, 0]
         }),
-        transition: (duration: number, delay: number) => ({
+        transition: (duration: number, delay: number): Transition => ({
           duration: duration - 1,
           delay: delay,
           repeat: Infinity,
-          ease: "linear" as const
+          ease: "linear"
         })
       },
       small: {
@@ -191,11 +191,11 @@ export default function TechBackgroundAnimation() {
           y: [`0%`, `${item.offsetY * 1.8}%`, `0%`],
           scale: [1, item.isCircle ? 1.2 : 0.9, 1]
         }),
-        transition: (duration: number, delay: number) => ({
+        transition: (duration: number, delay: number): Transition => ({
           duration: duration - 1.5,
           delay: delay,
           repeat: Infinity,
-          ease: "easeInOut" as const
+          ease: "easeInOut"
         })
       }
     };
