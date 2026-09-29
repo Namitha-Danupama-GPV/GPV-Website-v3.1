@@ -130,7 +130,7 @@ export default function TechBackgroundAnimation() {
           duration: duration,
           delay: delay,
           repeat: Infinity,
-          ease: "easeInOut"
+          ease: "easeInOut" as const
         })
       },
       medium: {
@@ -142,7 +142,7 @@ export default function TechBackgroundAnimation() {
           duration: duration,
           delay: delay,
           repeat: Infinity,
-          ease: "linear"
+          ease: "linear" as const
         })
       },
       small: {
@@ -154,7 +154,7 @@ export default function TechBackgroundAnimation() {
           duration: duration,
           delay: delay,
           repeat: Infinity,
-          ease: "easeInOut"
+          ease: "easeInOut" as const
         })
       }
     } : {
@@ -169,7 +169,7 @@ export default function TechBackgroundAnimation() {
           duration: duration,
           delay: delay,
           repeat: Infinity,
-          ease: "easeInOut"
+          ease: "easeInOut" as const
         })
       },
       medium: {
@@ -182,7 +182,7 @@ export default function TechBackgroundAnimation() {
           duration: duration - 1,
           delay: delay,
           repeat: Infinity,
-          ease: "linear"
+          ease: "linear" as const
         })
       },
       small: {
@@ -195,7 +195,7 @@ export default function TechBackgroundAnimation() {
           duration: duration - 1.5,
           delay: delay,
           repeat: Infinity,
-          ease: "easeInOut"
+          ease: "easeInOut" as const
         })
       }
     };
@@ -276,8 +276,8 @@ export default function TechBackgroundAnimation() {
               top: ["10%", "60%", "30%", "70%", "10%"] 
             }}
             transition={{ 
-              left: { duration: 15, repeat: Infinity, ease: "linear" }, 
-              top: { duration: 15, repeat: Infinity, ease: "easeInOut" } 
+              left: { duration: 15, repeat: Infinity, ease: "linear" as const }, 
+              top: { duration: 15, repeat: Infinity, ease: "easeInOut" as const } 
             }}
           />
 
@@ -290,8 +290,8 @@ export default function TechBackgroundAnimation() {
               top: ["70%", "20%", "50%", "30%", "70%"] 
             }}
             transition={{ 
-              left: { duration: 18, repeat: Infinity, ease: "linear" }, 
-              top: { duration: 18, repeat: Infinity, ease: "easeInOut" } 
+              left: { duration: 18, repeat: Infinity, ease: "linear" as const }, 
+              top: { duration: 18, repeat: Infinity, ease: "easeInOut" as const } 
             }}
           />
         </>
