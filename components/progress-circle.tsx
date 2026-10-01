@@ -51,13 +51,13 @@ export function ProgressCircle() {
 
   return (
     <div
-      className={`fixed bottom-8 right-8 transition-opacity duration-300 ${
+      className={`fixed bottom-6 sm:bottom-8 right-4 sm:right-8 z-[80] transition-opacity duration-300 ${
         isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
     >
       <button
         onClick={scrollToTop}
-        className="flex items-center justify-center w-12 h-12 rounded-full bg-white shadow-md border border-gray-200 hover:bg-gray-50 transition-colors"
+        className="flex items-center justify-center w-12 h-12 rounded-full bg-white shadow-lg border border-gray-200/80 hover:bg-gray-50 transition-all hover:scale-105 active:scale-95 cursor-pointer"
         aria-label="Scroll to top"
       >
         <div className="relative flex items-center justify-center w-full h-full">

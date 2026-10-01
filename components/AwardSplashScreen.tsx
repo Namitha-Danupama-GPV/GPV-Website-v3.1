@@ -158,23 +158,23 @@ export default function AwardSplashScreen({ forceShow = false }: AwardSplashScre
             <div className="absolute inset-0 bg-radial from-transparent via-slate-950/70 to-slate-950/95 pointer-events-none z-10" />
 
             {/* Skip / Close Top Controls */}
-            <div className="absolute top-6 right-6 z-30 flex items-center gap-4">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/80 border border-emerald-500/40 text-emerald-400 text-xs font-semibold backdrop-blur-md shadow-lg">
-                <Clock className="h-3.5 w-3.5 text-emerald-400 animate-spin-slow" />
+            <div className="absolute top-4 right-4 sm:top-6 sm:right-6 z-30 flex items-center gap-2 sm:gap-4">
+              <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-slate-900/80 border border-emerald-500/40 text-emerald-400 text-[11px] sm:text-xs font-semibold backdrop-blur-md shadow-lg">
+                <Clock className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-emerald-400 animate-spin-slow" />
                 <span>Auto-continuing in <strong className="text-white font-bold">{timeLeft}s</strong></span>
               </div>
 
               <button
                 onClick={handleClose}
-                className="rounded-full p-2.5 bg-slate-900/80 border border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800 transition-colors backdrop-blur-md cursor-pointer"
+                className="rounded-full p-2 sm:p-2.5 bg-slate-900/80 border border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800 transition-colors backdrop-blur-md cursor-pointer"
                 aria-label="Skip splash screen"
               >
-                <X className="h-6 w-6" />
+                <X className="h-5 w-5 sm:h-6 sm:w-6" />
               </button>
             </div>
 
             {/* Main 2-Column Split Splash Layout */}
-            <div className="relative z-20 container mx-auto px-6 sm:px-12 max-w-6xl grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center min-h-screen py-16 overflow-hidden">
+            <div className="relative z-20 container mx-auto px-4 sm:px-12 max-w-6xl grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 items-center min-h-screen py-20 md:py-16 overflow-y-auto no-scrollbar">
               
               {/* Left Column: Award Image with Breathing Motion */}
               <motion.div
@@ -185,7 +185,7 @@ export default function AwardSplashScreen({ forceShow = false }: AwardSplashScre
               >
                 <div className="relative w-full flex items-center justify-center">
                   {/* Expanded Glowing Emerald Aura */}
-                  <div className="absolute -inset-12 rounded-full bg-gradient-to-r from-emerald-500 via-green-400 to-amber-500 opacity-35 blur-3xl animate-pulse pointer-events-none" />
+                  <div className="absolute -inset-8 sm:-inset-12 rounded-full bg-gradient-to-r from-emerald-500 via-green-400 to-amber-500 opacity-35 blur-3xl animate-pulse pointer-events-none" />
 
                   {/* 3D Rotating Model Canvas (COMMENTED OUT FOR FUTURE USE) */}
                   {/*
@@ -204,7 +204,7 @@ export default function AwardSplashScreen({ forceShow = false }: AwardSplashScre
                       repeat: Infinity,
                       ease: "easeInOut",
                     }}
-                    className="w-full max-w-[450px] sm:max-w-[520px] md:max-w-[580px] h-auto object-contain relative z-10 filter drop-shadow-[0_0_35px_rgba(0,255,102,0.4)]"
+                    className="w-full max-w-[290px] xs:max-w-[340px] sm:max-w-[480px] md:max-w-[580px] h-auto object-contain relative z-10 filter drop-shadow-[0_0_30px_rgba(0,255,102,0.45)]"
                   />
                 </div>
               </motion.div>
@@ -214,15 +214,15 @@ export default function AwardSplashScreen({ forceShow = false }: AwardSplashScre
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-                className="md:col-span-7 flex flex-col text-left space-y-6"
+                className="md:col-span-7 flex flex-col text-left space-y-3 sm:space-y-6"
               >
                 <div>
-                  <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-400/40 text-emerald-300 text-xs font-semibold uppercase tracking-widest backdrop-blur-md mb-4 shadow-[0_0_20px_rgba(0,255,102,0.2)]">
-                    <Sparkles className="h-4 w-4 text-emerald-400" />
+                  <span className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-emerald-500/15 border border-emerald-400/40 text-emerald-300 text-[10px] sm:text-xs font-semibold uppercase tracking-widest backdrop-blur-md mb-2 sm:mb-4 shadow-[0_0_20px_rgba(0,255,102,0.2)]">
+                    <Sparkles className="h-3.5 w-3.5 text-emerald-400" />
                     National ICT Awards Trust 2026
                   </span>
 
-                  <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                  <h1 className="text-2xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-snug sm:leading-tight">
                     Bronze Winner in{" "}
                     <span className="bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 bg-clip-text text-transparent">
                       Health & Well-Being!
@@ -230,22 +230,22 @@ export default function AwardSplashScreen({ forceShow = false }: AwardSplashScre
                   </h1>
                 </div>
 
-                <p className="text-sm sm:text-lg font-semibold text-emerald-400 uppercase tracking-widest">
+                <p className="text-xs sm:text-lg font-semibold text-emerald-400 uppercase tracking-wider sm:tracking-widest">
                   Inclusions and Community Services Category
                 </p>
 
-                <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-xl">
+                <p className="text-xs sm:text-base text-slate-300 leading-relaxed max-w-xl">
                   Global Pearl Ventures has been officially awarded Bronze Winner by the National ICT Awards Trust 2026 for outstanding innovation in the Health and Well-being in Inclusions and Community Services Category.
                 </p>
 
                 {/* Action CTA Bar */}
-                <div className="pt-4 flex flex-col sm:flex-row items-center gap-4">
+                <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row items-center gap-4">
                   <button
                     onClick={handleClose}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-9 py-4 rounded-full bg-gradient-to-r from-emerald-500 via-teal-400 to-emerald-600 text-slate-950 font-extrabold text-base hover:brightness-110 shadow-[0_0_35px_rgba(0,255,102,0.4)] transition-all transform hover:-translate-y-0.5 cursor-pointer"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 sm:gap-3 px-7 sm:px-9 py-3 sm:py-4 rounded-full bg-gradient-to-r from-emerald-500 via-teal-400 to-emerald-600 text-slate-950 font-extrabold text-sm sm:text-base hover:brightness-110 shadow-[0_0_35px_rgba(0,255,102,0.4)] transition-all transform hover:-translate-y-0.5 cursor-pointer"
                   >
                     <span>Explore Site Now ({timeLeft}s)</span>
-                    <ArrowRight className="h-5 w-5 text-slate-950" />
+                    <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 text-slate-950" />
                   </button>
                 </div>
               </motion.div>
