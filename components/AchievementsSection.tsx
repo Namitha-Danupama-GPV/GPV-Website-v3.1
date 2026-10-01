@@ -22,11 +22,11 @@ const defaultArticles: PressArticle[] = [
   {
     id: "national-ict-bronze-2026",
     badge: "National ICT Awards Trust 2026",
-    title: "GLOBAL PEARL VENTURES WINS BRONZE AWARD AT NATIONAL ICT AWARDS 2026",
+    title: "GLOBAL PEARL VENTURES WINS AT NATIONAL ICT AWARDS 2026",
     publisher: "Health and Well-being in Inclusions & Community Services Category",
     date: "2026",
     description:
-      "Global Pearl Ventures achieved a landmark national victory by winning the Bronze Award at the prestigious National ICT Awards Trust 2026. Recognized for breakthrough technology innovation in the Health and Well-being in Inclusions and Community Services Category, this honor highlights GPV's commitment to building impactful, enterprise-grade digital solutions for healthcare and community wellness.",
+      "Global Pearl Ventures achieved a landmark national victory by winning at the prestigious National ICT Awards Trust 2026. Recognized for breakthrough technology innovation in the Health and Well-being in Inclusions and Community Services Category, this honor highlights GPV's commitment to building impactful, enterprise-grade digital solutions for healthcare and community wellness.",
     articleUrl: "https://www.globalpearlventures.com",
     featured: true,
     image: "/Award1.jpeg",
@@ -159,7 +159,7 @@ export default function AchievementsSection({
                   )}
                   <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between pointer-events-none">
                     <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/80 border border-slate-700 text-amber-300 text-xs font-bold uppercase tracking-wider backdrop-blur-md">
-                      {currentArticle.featured ? "Bronze Winner 🥉" : "Special Recognition 📜"}
+                      {currentArticle.featured ? "Winner 🏆" : "Special Recognition 📜"}
                     </span>
                     <span className="text-xs font-semibold text-slate-300 bg-slate-950/70 px-2.5 py-0.5 rounded-full border border-slate-800">
                       0{currentIndex + 1} / 0{articles.length}

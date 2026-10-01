@@ -382,7 +382,7 @@ export default function OurServices() {
   return (
     <div className="flex flex-col min-h-screen bg-white text-gray-900">
       {/* ── Hero Section ── */}
-      <section className="relative text-center pt-16 md:pt-20 pb-10 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-b from-blue-50/70 via-white to-white">
+      <section className="relative text-center pt-8 sm:pt-10 md:pt-12 pb-8 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-b from-blue-50/70 via-white to-white">
         <BackgroundAnimation />
 
         <div className="relative max-w-5xl mx-auto z-10">
@@ -402,7 +402,7 @@ export default function OurServices() {
       </section>
 
       {/* ── STICKY Capsule Navigation Dock (Stays in place when scrolling) ── */}
-      <div className="sticky top-16 md:top-20 z-40 bg-white/95 backdrop-blur-2xl border-y border-blue-100/90 shadow-xl py-3 sm:py-4 transition-all duration-300">
+      <div className="sticky top-20 z-40 bg-white/95 backdrop-blur-2xl border-y border-blue-100/90 shadow-xl py-3 sm:py-4 transition-all duration-300">
         <div className="max-w-7xl lg:max-w-[1400px] mx-auto px-2 sm:px-6 lg:px-8">
           <div className="rounded-3xl border border-blue-200/90 bg-gradient-to-r from-slate-50 via-blue-50/40 to-slate-50 backdrop-blur-xl p-3 sm:p-5 md:p-6 shadow-2xl shadow-blue-950/10">
             

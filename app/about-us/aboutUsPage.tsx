@@ -21,7 +21,7 @@ export default function AboutUsPage() {
     <div className="flex flex-col min-h-screen bg-white text-gray-900">
       <main className="flex-1">
         {/* ── Hero Section ── */}
-        <section className="w-full py-16 md:py-24 lg:py-28 bg-gradient-to-b from-blue-50/80 via-white to-white border-b border-gray-100">
+        <section className="w-full pt-8 sm:pt-10 md:pt-12 pb-14 md:pb-20 bg-gradient-to-b from-blue-50/80 via-white to-white border-b border-gray-100">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-12">
               <motion.div

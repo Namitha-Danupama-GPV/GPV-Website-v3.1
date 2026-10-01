@@ -133,7 +133,7 @@ export default function AwardSplashScreen({ forceShow = false }: AwardSplashScre
                   National ICT Award 2026
                 </span>
                 <span className="text-xs font-extrabold text-white leading-tight">
-                  Bronze Winner 🥉
+                  Winner 🏆
                 </span>
               </div>
             </button>
@@ -195,7 +195,7 @@ export default function AwardSplashScreen({ forceShow = false }: AwardSplashScre
                   {/* Static Award Splash Screen Image with Breathing Motion */}
                   <motion.img
                     src="/Award splash screen image.png"
-                    alt="National ICT Award 2026 Bronze Winner"
+                    alt="National ICT Award 2026 Winner"
                     animate={{
                       scale: [1, 1.06, 1],
                     }}
@@ -223,7 +223,7 @@ export default function AwardSplashScreen({ forceShow = false }: AwardSplashScre
                   </span>
 
                   <h1 className="text-2xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-snug sm:leading-tight">
-                    Bronze Winner in{" "}
+                    Winner in{" "}
                     <span className="bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 bg-clip-text text-transparent">
                       Health & Well-Being!
                     </span>
@@ -235,7 +235,7 @@ export default function AwardSplashScreen({ forceShow = false }: AwardSplashScre
                 </p>
 
                 <p className="text-xs sm:text-base text-slate-300 leading-relaxed max-w-xl">
-                  Global Pearl Ventures has been officially awarded Bronze Winner by the National ICT Awards Trust 2026 for outstanding innovation in the Health and Well-being in Inclusions and Community Services Category.
+                  Global Pearl Ventures has been officially awarded Winner by the National ICT Awards Trust 2026 for outstanding innovation in the Health and Well-being in Inclusions and Community Services Category.
                 </p>
 
                 {/* Action CTA Bar */}

@@ -784,7 +784,7 @@ export default function IndustriesPage() {
     <div className="bg-white text-gray-900">
       {/* ── Cinematic Hero ── */}
 
-      <section className="relative isolate overflow-hidden bg-[#797c79] py-24 text-gray-900 sm:py-32">
+      <section className="relative isolate overflow-hidden bg-[#797c79] pt-8 sm:pt-10 md:pt-12 pb-16 sm:pb-20 text-gray-900">
         <HeroBackdrop />
         <div className="absolute inset-0 bg-black/50 backdrop-blur-sm z-0" />
         <Image

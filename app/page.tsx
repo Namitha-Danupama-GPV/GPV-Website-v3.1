@@ -46,7 +46,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen bg-white text-gray-900">
       <AwardSplashScreen />
       {/* ── Cinematic Hero Section ── */}
-      <section className="relative z-0 w-full py-20 md:py-32 bg-gradient-to-b from-blue-50/80 via-white to-white overflow-hidden border-b border-gray-100">
+      <section className="relative z-0 w-full pt-10 sm:pt-12 md:pt-16 pb-16 md:pb-24 bg-gradient-to-b from-blue-50/80 via-white to-white overflow-hidden border-b border-gray-100">
         <BackgroundAnimation />
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center">

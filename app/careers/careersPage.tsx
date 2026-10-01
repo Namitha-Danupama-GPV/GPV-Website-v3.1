@@ -377,7 +377,7 @@ export default function CareersPage() {
   return (
     <div className="flex flex-col min-h-screen bg-white text-gray-900">
       {/* ── Hero Section ── */}
-      <section className="relative text-center py-20 md:py-28 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-b from-blue-50/80 via-white to-white border-b border-gray-100">
+      <section className="relative text-center pt-8 sm:pt-10 md:pt-12 pb-14 md:pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-b from-blue-50/80 via-white to-white border-b border-gray-100">
         <BackgroundAnimation />
 
         <div className="relative max-w-4xl mx-auto z-10">
