@@ -18,11 +18,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="overflow-x-hidden max-w-full">
       <head>
         <link rel="icon" href="/Logo-v6.ico" />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} overflow-x-hidden w-full max-w-full relative`}>
         <ThemeProvider attribute="class" defaultTheme="light">
           <MainNav />
           <Toaster richColors position="top-center" />

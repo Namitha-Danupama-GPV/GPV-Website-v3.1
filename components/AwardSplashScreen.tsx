@@ -113,21 +113,22 @@ export default function AwardSplashScreen({ forceShow = false }: AwardSplashScre
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.5, y: 30 }}
             transition={{ type: "spring", stiffness: 300, damping: 22 }}
-            className="fixed bottom-24 right-8 z-[90]"
+            className="fixed bottom-20 sm:bottom-24 right-4 sm:right-8 z-[90] max-w-[calc(100vw-2rem)]"
           >
             <button
               onClick={handleOpenFromMinimized}
-              className="group relative flex items-center gap-3 px-4 py-2.5 rounded-full bg-slate-950/90 border border-emerald-400/70 text-white shadow-[0_0_30px_rgba(0,255,102,0.4)] hover:shadow-[0_0_40px_rgba(0,255,102,0.7)] backdrop-blur-md transition-all duration-300 transform hover:scale-105 cursor-pointer"
+              className="group relative flex items-center gap-2.5 sm:gap-3 p-2 sm:px-4 sm:py-2.5 rounded-full bg-slate-950/90 border border-emerald-400/70 text-white shadow-[0_0_25px_rgba(0,255,102,0.4)] hover:shadow-[0_0_35px_rgba(0,255,102,0.7)] backdrop-blur-md transition-all duration-300 transform hover:scale-110 cursor-pointer"
               aria-label="View Award Announcement"
             >
               {/* Glowing Green/Gold Pulse Ring */}
               <span className="absolute -inset-1 rounded-full bg-gradient-to-r from-emerald-500 via-green-400 to-amber-500 opacity-45 blur-md animate-pulse group-hover:opacity-80 transition-opacity" />
 
-              <div className="relative z-10 flex items-center justify-center h-8 w-8 rounded-full bg-gradient-to-br from-amber-400 to-yellow-500 text-slate-950 font-bold shadow-md">
+              <div className="relative z-10 flex items-center justify-center h-8 w-8 sm:h-8 sm:w-8 rounded-full bg-gradient-to-br from-amber-400 to-yellow-500 text-slate-950 font-bold shadow-md">
                 <Trophy className="h-4 w-4 animate-bounce" />
               </div>
 
-              <div className="relative z-10 flex flex-col text-left pr-1">
+              {/* Text hidden on mobile (< sm), shown on tablet & desktop (sm:flex) */}
+              <div className="relative z-10 hidden sm:flex flex-col text-left pr-1">
                 <span className="text-[10px] font-bold text-amber-400 uppercase tracking-widest leading-tight">
                   National ICT Award 2026
                 </span>
@@ -173,13 +174,13 @@ export default function AwardSplashScreen({ forceShow = false }: AwardSplashScre
             </div>
 
             {/* Main 2-Column Split Splash Layout */}
-            <div className="relative z-20 container mx-auto px-6 sm:px-12 max-w-6xl grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center min-h-screen py-16">
+            <div className="relative z-20 container mx-auto px-6 sm:px-12 max-w-6xl grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center min-h-screen py-16 overflow-hidden">
               
               {/* Left Column: Award Image with Breathing Motion */}
               <motion.div
-                initial={{ x: "80vw", opacity: 0, scale: 0.8 }}
-                animate={{ x: 0, opacity: 1, scale: 1 }}
-                transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+                initial={{ opacity: 0, scale: 0.9, y: 30 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
                 className="md:col-span-5 flex justify-center items-center relative"
               >
                 <div className="relative w-full flex items-center justify-center">
@@ -210,9 +211,9 @@ export default function AwardSplashScreen({ forceShow = false }: AwardSplashScre
 
               {/* Right Column: Victory Announcement & Details */}
               <motion.div
-                initial={{ opacity: 0, x: 40 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
                 className="md:col-span-7 flex flex-col text-left space-y-6"
               >
                 <div>
