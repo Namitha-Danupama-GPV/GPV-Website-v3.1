@@ -158,167 +158,169 @@ export default function AboutUsPage() {
           </div>
         </section>
 
-        {/* ── Executive Leadership Section ── */}
-        <section className="px-4 sm:px-6 lg:px-8 py-20 sm:py-24 bg-white border-b border-gray-100">
-          <div className="max-w-6xl mx-auto text-center">
-            <span className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-blue-700 shadow-sm">
-              <Users className="h-3.5 w-3.5 text-blue-600" />
-              Executive Leadership
-            </span>
-            <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900">
-              Meet the Visionaries Behind{" "}
-              <span className="bg-gradient-to-r from-blue-600 via-teal-500 to-emerald-500 bg-clip-text text-transparent">
-                GPV
+        {/* ── Executive Leadership Section (DISABLED UNTIL DETAILS PROVIDED) ── */}
+        {false && (
+          <section className="px-4 sm:px-6 lg:px-8 py-20 sm:py-24 bg-white border-b border-gray-100">
+            <div className="max-w-6xl mx-auto text-center">
+              <span className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-blue-700 shadow-sm">
+                <Users className="h-3.5 w-3.5 text-blue-600" />
+                Executive Leadership
               </span>
-            </h2>
-            <p className="max-w-2xl mx-auto mt-4 text-gray-600 text-base sm:text-lg leading-relaxed">
-              Our leadership team combines deep technical expertise, industry foresight, and a shared commitment to building transformative enterprise software.
-            </p>
+              <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900">
+                Meet the Visionaries Behind{" "}
+                <span className="bg-gradient-to-r from-blue-600 via-teal-500 to-emerald-500 bg-clip-text text-transparent">
+                  GPV
+                </span>
+              </h2>
+              <p className="max-w-2xl mx-auto mt-4 text-gray-600 text-base sm:text-lg leading-relaxed">
+                Our leadership team combines deep technical expertise, industry foresight, and a shared commitment to building transformative enterprise software.
+              </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-14 text-left">
-              {/* Leader 1 */}
-              <motion.div
-                initial={{ opacity: 0, y: 35 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.15 }}
-                transition={{ duration: 0.5, delay: 0.05 }}
-                className="group relative overflow-hidden rounded-3xl border border-gray-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-300 hover:shadow-xl flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="relative h-20 w-20 overflow-hidden rounded-2xl border-2 border-blue-500/20 shadow-md">
-                      <Image
-                        src="/Logo-v6.png"
-                        alt="Leadership"
-                        width={80}
-                        height={80}
-                        className="object-cover p-2 bg-gradient-to-br from-blue-50 to-white"
-                      />
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-14 text-left">
+                {/* Leader 1 */}
+                <motion.div
+                  initial={{ opacity: 0, y: 35 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.15 }}
+                  transition={{ duration: 0.5, delay: 0.05 }}
+                  className="group relative overflow-hidden rounded-3xl border border-gray-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-blue-300 hover:shadow-xl flex flex-col justify-between"
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-6">
+                      <div className="relative h-20 w-20 overflow-hidden rounded-2xl border-2 border-blue-500/20 shadow-md">
+                        <Image
+                          src="/Logo-v6.png"
+                          alt="Leadership"
+                          width={80}
+                          height={80}
+                          className="object-cover p-2 bg-gradient-to-br from-blue-50 to-white"
+                        />
+                      </div>
+                      <a
+                        href="https://www.linkedin.com/company/global-pearl-ventures/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-3 rounded-full bg-slate-50 text-slate-600 hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-sm"
+                        aria-label="LinkedIn Profile"
+                      >
+                        <LinkedInIcon />
+                      </a>
                     </div>
-                    <a
-                      href="https://www.linkedin.com/company/global-pearl-ventures/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-3 rounded-full bg-slate-50 text-slate-600 hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-sm"
-                      aria-label="LinkedIn Profile"
-                    >
-                      <LinkedInIcon />
-                    </a>
+
+                    <span className="inline-block rounded-full bg-blue-50 border border-blue-200 px-3 py-1 text-xs font-semibold text-blue-700 mb-2">
+                      Executive Leadership
+                    </span>
+                    <h3 className="text-2xl font-bold text-gray-900">Executive Director & Founder</h3>
+                    <p className="text-sm font-semibold text-blue-600 mb-4">Strategic Vision & Enterprise Growth</p>
+
+                    <p className="text-sm text-gray-600 leading-relaxed mb-6">
+                      &ldquo;Our vision is to empower enterprises with digital infrastructure that scales effortlessly while setting new benchmarks for security and clinical accuracy.&rdquo;
+                    </p>
                   </div>
 
-                  <span className="inline-block rounded-full bg-blue-50 border border-blue-200 px-3 py-1 text-xs font-semibold text-blue-700 mb-2">
-                    Executive Leadership
-                  </span>
-                  <h3 className="text-2xl font-bold text-gray-900">Executive Director & Founder</h3>
-                  <p className="text-sm font-semibold text-blue-600 mb-4">Strategic Vision & Enterprise Growth</p>
+                  <div className="pt-4 border-t border-gray-100 flex flex-wrap gap-2 text-xs font-medium text-gray-500">
+                    <span className="bg-gray-100 px-2.5 py-1 rounded-md">Enterprise Strategy</span>
+                    <span className="bg-gray-100 px-2.5 py-1 rounded-md">Global Expansion</span>
+                  </div>
+                </motion.div>
 
-                  <p className="text-sm text-gray-600 leading-relaxed mb-6">
-                    &ldquo;Our vision is to empower enterprises with digital infrastructure that scales effortlessly while setting new benchmarks for security and clinical accuracy.&rdquo;
-                  </p>
-                </div>
-
-                <div className="pt-4 border-t border-gray-100 flex flex-wrap gap-2 text-xs font-medium text-gray-500">
-                  <span className="bg-gray-100 px-2.5 py-1 rounded-md">Enterprise Strategy</span>
-                  <span className="bg-gray-100 px-2.5 py-1 rounded-md">Global Expansion</span>
-                </div>
-              </motion.div>
-
-              {/* Leader 2 */}
-              <motion.div
-                initial={{ opacity: 0, y: 35 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.15 }}
-                transition={{ duration: 0.5, delay: 0.15 }}
-                className="group relative overflow-hidden rounded-3xl border border-gray-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-teal-300 hover:shadow-xl flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="relative h-20 w-20 overflow-hidden rounded-2xl border-2 border-teal-500/20 shadow-md">
-                      <Image
-                        src="/Logo-v6.png"
-                        alt="Technology Leadership"
-                        width={80}
-                        height={80}
-                        className="object-cover p-2 bg-gradient-to-br from-teal-50 to-white"
-                      />
+                {/* Leader 2 */}
+                <motion.div
+                  initial={{ opacity: 0, y: 35 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.15 }}
+                  transition={{ duration: 0.5, delay: 0.15 }}
+                  className="group relative overflow-hidden rounded-3xl border border-gray-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-teal-300 hover:shadow-xl flex flex-col justify-between"
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-6">
+                      <div className="relative h-20 w-20 overflow-hidden rounded-2xl border-2 border-teal-500/20 shadow-md">
+                        <Image
+                          src="/Logo-v6.png"
+                          alt="Technology Leadership"
+                          width={80}
+                          height={80}
+                          className="object-cover p-2 bg-gradient-to-br from-teal-50 to-white"
+                        />
+                      </div>
+                      <a
+                        href="https://www.linkedin.com/company/global-pearl-ventures/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-3 rounded-full bg-slate-50 text-slate-600 hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-sm"
+                        aria-label="LinkedIn Profile"
+                      >
+                        <LinkedInIcon />
+                      </a>
                     </div>
-                    <a
-                      href="https://www.linkedin.com/company/global-pearl-ventures/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-3 rounded-full bg-slate-50 text-slate-600 hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-sm"
-                      aria-label="LinkedIn Profile"
-                    >
-                      <LinkedInIcon />
-                    </a>
+
+                    <span className="inline-block rounded-full bg-teal-50 border border-teal-200 px-3 py-1 text-xs font-semibold text-teal-700 mb-2">
+                      Engineering Leadership
+                    </span>
+                    <h3 className="text-2xl font-bold text-gray-900">Chief Technology Officer</h3>
+                    <p className="text-sm font-semibold text-teal-600 mb-4">Architecture & Cloud Infrastructure</p>
+
+                    <p className="text-sm text-gray-600 leading-relaxed mb-6">
+                      &ldquo;We engineer every system with resilience at its core — leveraging microservices, AI automation, and zero-footprint web security.&rdquo;
+                    </p>
                   </div>
 
-                  <span className="inline-block rounded-full bg-teal-50 border border-teal-200 px-3 py-1 text-xs font-semibold text-teal-700 mb-2">
-                    Engineering Leadership
-                  </span>
-                  <h3 className="text-2xl font-bold text-gray-900">Chief Technology Officer</h3>
-                  <p className="text-sm font-semibold text-teal-600 mb-4">Architecture & Cloud Infrastructure</p>
+                  <div className="pt-4 border-t border-gray-100 flex flex-wrap gap-2 text-xs font-medium text-gray-500">
+                    <span className="bg-gray-100 px-2.5 py-1 rounded-md">Cloud Architecture</span>
+                    <span className="bg-gray-100 px-2.5 py-1 rounded-md">DICOM & WebGL</span>
+                  </div>
+                </motion.div>
 
-                  <p className="text-sm text-gray-600 leading-relaxed mb-6">
-                    &ldquo;We engineer every system with resilience at its core — leveraging microservices, AI automation, and zero-footprint web security.&rdquo;
-                  </p>
-                </div>
-
-                <div className="pt-4 border-t border-gray-100 flex flex-wrap gap-2 text-xs font-medium text-gray-500">
-                  <span className="bg-gray-100 px-2.5 py-1 rounded-md">Cloud Architecture</span>
-                  <span className="bg-gray-100 px-2.5 py-1 rounded-md">DICOM & WebGL</span>
-                </div>
-              </motion.div>
-
-              {/* Leader 3 */}
-              <motion.div
-                initial={{ opacity: 0, y: 35 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.15 }}
-                transition={{ duration: 0.5, delay: 0.25 }}
-                className="group relative overflow-hidden rounded-3xl border border-gray-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-purple-300 hover:shadow-xl flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="relative h-20 w-20 overflow-hidden rounded-2xl border-2 border-purple-500/20 shadow-md">
-                      <Image
-                        src="/Logo-v6.png"
-                        alt="Product Leadership"
-                        width={80}
-                        height={80}
-                        className="object-cover p-2 bg-gradient-to-br from-purple-50 to-white"
-                      />
+                {/* Leader 3 */}
+                <motion.div
+                  initial={{ opacity: 0, y: 35 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.15 }}
+                  transition={{ duration: 0.5, delay: 0.25 }}
+                  className="group relative overflow-hidden rounded-3xl border border-gray-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-purple-300 hover:shadow-xl flex flex-col justify-between"
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-6">
+                      <div className="relative h-20 w-20 overflow-hidden rounded-2xl border-2 border-purple-500/20 shadow-md">
+                        <Image
+                          src="/Logo-v6.png"
+                          alt="Product Leadership"
+                          width={80}
+                          height={80}
+                          className="object-cover p-2 bg-gradient-to-br from-purple-50 to-white"
+                        />
+                      </div>
+                      <a
+                        href="https://www.linkedin.com/company/global-pearl-ventures/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-3 rounded-full bg-slate-50 text-slate-600 hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-sm"
+                        aria-label="LinkedIn Profile"
+                      >
+                        <LinkedInIcon />
+                      </a>
                     </div>
-                    <a
-                      href="https://www.linkedin.com/company/global-pearl-ventures/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-3 rounded-full bg-slate-50 text-slate-600 hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-sm"
-                      aria-label="LinkedIn Profile"
-                    >
-                      <LinkedInIcon />
-                    </a>
+
+                    <span className="inline-block rounded-full bg-purple-50 border border-purple-200 px-3 py-1 text-xs font-semibold text-purple-700 mb-2">
+                      Product & Innovation
+                    </span>
+                    <h3 className="text-2xl font-bold text-gray-900">VP of Product & AI Solutions</h3>
+                    <p className="text-sm font-semibold text-purple-600 mb-4">Product Innovation & User Experience</p>
+
+                    <p className="text-sm text-gray-600 leading-relaxed mb-6">
+                      &ldquo;Great software bridges complex domain challenges with seamless, intuitive design that users love interacting with every day.&rdquo;
+                    </p>
                   </div>
 
-                  <span className="inline-block rounded-full bg-purple-50 border border-purple-200 px-3 py-1 text-xs font-semibold text-purple-700 mb-2">
-                    Product & Innovation
-                  </span>
-                  <h3 className="text-2xl font-bold text-gray-900">VP of Product & AI Solutions</h3>
-                  <p className="text-sm font-semibold text-purple-600 mb-4">Product Innovation & User Experience</p>
-
-                  <p className="text-sm text-gray-600 leading-relaxed mb-6">
-                    &ldquo;Great software bridges complex domain challenges with seamless, intuitive design that users love interacting with every day.&rdquo;
-                  </p>
-                </div>
-
-                <div className="pt-4 border-t border-gray-100 flex flex-wrap gap-2 text-xs font-medium text-gray-500">
-                  <span className="bg-gray-100 px-2.5 py-1 rounded-md">AI & ML Pipelines</span>
-                  <span className="bg-gray-100 px-2.5 py-1 rounded-md">UI/UX Excellence</span>
-                </div>
-              </motion.div>
+                  <div className="pt-4 border-t border-gray-100 flex flex-wrap gap-2 text-xs font-medium text-gray-500">
+                    <span className="bg-gray-100 px-2.5 py-1 rounded-md">AI & ML Pipelines</span>
+                    <span className="bg-gray-100 px-2.5 py-1 rounded-md">UI/UX Excellence</span>
+                  </div>
+                </motion.div>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        )}
 
         {/* ── Achievements & Press Recognition Section ── */}
         <AchievementsSection />

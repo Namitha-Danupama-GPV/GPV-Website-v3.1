@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Trophy, Sparkles, X, Award, Clock, ArrowRight } from "lucide-react";
+import { Trophy, Sparkles, X, Award, Clock } from "lucide-react";
 import confetti from "canvas-confetti";
 import dynamic from "next/dynamic";
 import MatrixRainBackground from "./MatrixRainBackground";
@@ -194,7 +194,7 @@ export default function AwardSplashScreen({ forceShow = false }: AwardSplashScre
 
                   {/* Static Award Splash Screen Image with Breathing Motion */}
                   <motion.img
-                    src="/Award splash screen image.png"
+                    src="/award splash screen 3.png"
                     alt="National ICT Award 2026 Winner"
                     animate={{
                       scale: [1, 1.06, 1],
@@ -237,17 +237,6 @@ export default function AwardSplashScreen({ forceShow = false }: AwardSplashScre
                 <p className="text-xs sm:text-base text-slate-300 leading-relaxed max-w-xl">
                   Global Pearl Ventures has been officially awarded Winner by the National ICT Awards Trust 2026 for outstanding innovation in the Health and Well-being in Inclusions and Community Services Category.
                 </p>
-
-                {/* Action CTA Bar */}
-                <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row items-center gap-4">
-                  <button
-                    onClick={handleClose}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 sm:gap-3 px-7 sm:px-9 py-3 sm:py-4 rounded-full bg-gradient-to-r from-emerald-500 via-teal-400 to-emerald-600 text-slate-950 font-extrabold text-sm sm:text-base hover:brightness-110 shadow-[0_0_35px_rgba(0,255,102,0.4)] transition-all transform hover:-translate-y-0.5 cursor-pointer"
-                  >
-                    <span>Explore Site Now ({timeLeft}s)</span>
-                    <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 text-slate-950" />
-                  </button>
-                </div>
               </motion.div>
 
             </div>

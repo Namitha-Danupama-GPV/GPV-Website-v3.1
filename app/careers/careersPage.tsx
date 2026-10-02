@@ -33,11 +33,12 @@ import emailjs from "emailjs-com";
 type JobRole = {
   id: string;
   title: string;
-  department: "engineering" | "ai" | "design" | "product";
+  department: "marketing" | "ai" | "engineering";
   departmentLabel: string;
   location: string;
   type: string;
   experience: string;
+  urgentHiring?: boolean;
   description: string;
   responsibilities: string[];
   requirements: string[];
@@ -46,177 +47,79 @@ type JobRole = {
 
 const jobRoles: JobRole[] = [
   {
-    id: "sr-fullstack-dev",
-    title: "Senior Full-Stack Engineer (Next.js / Node.js)",
-    department: "engineering",
-    departmentLabel: "Engineering",
-    location: "Remote / Hybrid (USA / Sri Lanka)",
-    type: "Full-Time",
-    experience: "4+ Years",
+    id: "marketing-intern",
+    title: "Marketing Intern",
+    department: "marketing",
+    departmentLabel: "Marketing & Growth",
+    location: "Hybrid / Remote",
+    type: "Internship",
+    experience: "Entry Level / Student",
+    urgentHiring: true,
     description:
-      "Architect and build scalable web applications using Next.js 15, TypeScript, React 19, and Node.js microservices. You will lead core feature developments for our enterprise software suite.",
+      "We are seeking a highly creative and organized Marketing Intern to help elevate our brand presence and execute digital campaigns. In this role, you will be the voice of our brand across multiple platforms, driving engagement and creating compelling promotional materials.",
     responsibilities: [
-      "Develop responsive, high-performance web applications using React/Next.js and TypeScript.",
-      "Design and maintain scalable RESTful APIs and GraphQL services with Node.js/Express.",
-      "Optimize application load times, bundle sizes, and database query performance.",
-      "Collaborate with product designers and backend engineers in an agile squad environment."
+      "Manage day-to-day posting and community engagement across social media platforms.",
+      "Assist in developing content calendars, marketing packages, and promotional video scripts.",
+      "Track and analyze the performance of digital marketing campaigns and social media metrics.",
+      "Collaborate with the design and product teams to ensure all external communications align with our brand identity."
     ],
     requirements: [
-      "Strong proficiency in React 18/19, Next.js (App Router), TypeScript, and Tailwind CSS.",
-      "Solid experience with Node.js, PostgreSQL/MongoDB, and Redis caching.",
-      "Familiarity with Docker, CI/CD pipelines, and cloud platforms (AWS or Azure).",
-      "Excellent problem-solving skills and passion for clean, maintainable code."
-    ],
-    niceToHave: [
-      "Experience with Next.js 15 App Router & Server Actions.",
-      "Familiarity with Tailwind CSS and Framer Motion micro-interactions.",
-      "Prior experience in B2B SaaS healthcare or enterprise software."
+      "Please note: We are exclusively seeking female candidates for this specific role.",
+      "Currently pursuing or recently completed a degree/diploma in Marketing, Communications, Business, or a related field.",
+      "Strong understanding of digital marketing trends, social media algorithms, and content planning.",
+      "Excellent written and verbal communication skills with a flair for creative storytelling.",
+      "Basic design or video editing skills are a strong plus."
     ]
   },
   {
-    id: "ai-ml-engineer",
-    title: "AI & Machine Learning Engineer",
+    id: "ai-ml-intern",
+    title: "AI & Machine Learning Intern",
     department: "ai",
     departmentLabel: "AI & Data Science",
-    location: "Remote / Hybrid",
-    type: "Full-Time",
-    experience: "3+ Years",
+    location: "Hybrid / Remote",
+    type: "Internship",
+    experience: "Entry Level / Student",
     description:
-      "Drive intelligent automation across GPV products. Implement LLMs, predictive models, and computer vision algorithms for medical imaging and automated adjudication systems.",
+      "We are looking for a curious and analytical AI & ML Intern to help us build intelligent solutions. You will work closely with our engineering team to research, develop, and implement machine learning models and integrate AI capabilities into our core products.",
     responsibilities: [
-      "Design, train, and deploy machine learning and deep learning models into production.",
-      "Build AI pipelines for automated medical claims processing and intelligent text analysis.",
-      "Integrate OpenAI, Claude API, and custom fine-tuned transformer models.",
-      "Monitor model performance, latency, and drift in live production environments."
+      "Assist in designing, training, and testing machine learning models and neural networks.",
+      "Pre-process, clean, and analyze datasets to ensure high-quality model training.",
+      "Help integrate natural language processing (NLP) and Large Language Model (LLM) APIs into existing web applications.",
+      "Research new AI trends, algorithms, and frameworks to improve current system architectures."
     ],
     requirements: [
-      "Strong background in Python, PyTorch/TensorFlow, scikit-learn, and Hugging Face.",
-      "Experience with LLM orchestration (LangChain, LlamaIndex) and Vector DBs (Pinecone, Qdrant).",
-      "Understanding of REST APIs and model deployment with FastAPI/Docker.",
-      "Bachelor's or Master's degree in Computer Science, AI, or related quantitative field."
-    ],
-    niceToHave: [
-      "Hands-on experience fine-tuning Llama-3 or Mistral models.",
-      "Contributions to open-source AI frameworks or published research.",
-      "Experience with GPU acceleration (CUDA, TensorRT)."
+      "Currently pursuing a degree in Computer Science, Software Engineering, or a related field.",
+      "Strong programming foundation in Python.",
+      "Familiarity with ML libraries and frameworks (e.g., PyTorch, TensorFlow, or Scikit-Learn).",
+      "A solid understanding of data structures, algorithms, and basic statistical concepts."
     ]
   },
   {
-    id: "medical-imaging-dev",
-    title: "Medical Imaging & DICOM Software Developer",
+    id: "data-engineer-intern",
+    title: "Data Engineer Intern",
     department: "engineering",
-    departmentLabel: "Healthcare Tech",
-    location: "Remote (USA / Canada / Sri Lanka)",
-    type: "Full-Time",
-    experience: "3+ Years",
+    departmentLabel: "Data Engineering",
+    location: "Hybrid / Remote",
+    type: "Internship",
+    experience: "Entry Level / Student",
     description:
-      "Join the Photon XR core engineering team to build web-based DICOM viewers, PACS integration protocols, and high-fidelity radiological visualization tools.",
+      "Data is the backbone of our operations. As a Data Engineer Intern, you will help design and maintain the infrastructure that keeps our data flowing securely and efficiently. This is a hands-on role where you will learn how to manage scalable databases and build robust data pipelines.",
     responsibilities: [
-      "Develop WebGL and WebAssembly-powered DICOM image rendering algorithms.",
-      "Implement DICOM Web (WADO-RS, QIDO-RS, STOW-RS) communication protocols.",
-      "Ensure strict HIPAA compliance, data encryption, and zero-footprint web security.",
-      "Work closely with radiologists and healthcare IT teams to refine clinical UX."
+      "Support the development and maintenance of ETL (Extract, Transform, Load) pipelines.",
+      "Write and optimize complex SQL queries for data extraction and analysis.",
+      "Assist in managing relational databases (such as PostgreSQL) and ensuring data integrity.",
+      "Collaborate with backend developers to connect databases seamlessly with RESTful APIs."
     ],
     requirements: [
-      "Experience with DICOM standards, PACS/RIS architecture, and health IT protocols.",
-      "Proficiency in JavaScript/TypeScript, WebGL, Cornerstone.js, or VTK.js.",
-      "Understanding of medical image processing, windowing, and 3D MPR rendering.",
-      "Strong commitment to software quality and regulatory compliance."
-    ],
-    niceToHave: [
-      "Familiarity with Cornerstone3D, OHIF Viewer, or Orthanc PACS.",
-      "Experience with WebAssembly (Wasm) DICOM decompression.",
-      "Knowledge of FDA medical device software guidelines."
-    ]
-  },
-  {
-    id: "sr-ui-ux-designer",
-    title: "Senior UI/UX & Product Designer",
-    department: "design",
-    departmentLabel: "Product Design",
-    location: "Remote",
-    type: "Full-Time",
-    experience: "3+ Years",
-    description:
-      "Craft intuitive, human-centered user interfaces for complex healthcare, aviation, and marketplace software platforms. Turn complex workflows into elegant user experiences.",
-    responsibilities: [
-      "Lead user research, wireframing, interactive prototyping, and visual design in Figma.",
-      "Maintain and evolve GPV’s design system and component libraries.",
-      "Conduct usability testing sessions with domain experts and end-users.",
-      "Work side-by-side with frontend developers to ensure pixel-perfect implementation."
-    ],
-    requirements: [
-      "Strong portfolio demonstrating end-to-end UX/UI design for complex web/mobile platforms.",
-      "Mastery of Figma, design tokens, micro-interactions, and design systems.",
-      "Understanding of modern Web CSS capabilities (Tailwind, Framer Motion animations).",
-      "Great communication skills and ability to articulate design decisions."
-    ],
-    niceToHave: [
-      "Experience designing complex B2B SaaS dashboards.",
-      "Basic understanding of React / HTML / Tailwind implementation.",
-      "Motion design skills (Lottie, Rive, or After Effects)."
-    ]
-  },
-  {
-    id: "cloud-devops-specialist",
-    title: "Cloud Infrastructure & DevOps Engineer",
-    department: "engineering",
-    departmentLabel: "Infrastructure",
-    location: "Remote",
-    type: "Full-Time",
-    experience: "4+ Years",
-    description:
-      "Build, secure, and scale high-availability cloud infrastructure on Azure and AWS. Automate multi-region deployments, monitoring, and security controls.",
-    responsibilities: [
-      "Manage Infrastructure as Code (IaC) using Terraform / Bicep.",
-      "Maintain automated CI/CD pipelines via GitHub Actions and Azure DevOps.",
-      "Implement zero-trust security controls, IAM, and compliance monitoring.",
-      "Optimize cloud infrastructure cost, elasticity, and uptime (99.99% target)."
-    ],
-    requirements: [
-      "Deep expertise in Microsoft Azure and AWS cloud services.",
-      "Hands-on experience with Kubernetes (AKS/EKS), Docker, Terraform, and Nginx.",
-      "Knowledge of SOC2, HIPAA, and ISO 27001 security compliance controls.",
-      "Strong scripting abilities in Bash, Python, or PowerShell."
-    ],
-    niceToHave: [
-      "Certified Azure Solutions Architect or AWS DevOps Engineer.",
-      "Experience with service meshes (Istio, Linkerd) and Prometheus/Grafana.",
-      "Automated security scanning with SonarQube & Trivy."
-    ]
-  },
-  {
-    id: "product-manager",
-    title: "Enterprise Product Manager",
-    department: "product",
-    departmentLabel: "Product Management",
-    location: "Hybrid (USA / Sri Lanka)",
-    type: "Full-Time",
-    experience: "4+ Years",
-    description:
-      "Own product roadmaps, requirements gathering, and feature prioritization for GPV's enterprise products. Bridge business goals with engineering execution.",
-    responsibilities: [
-      "Define product strategy, user stories, acceptance criteria, and roadmap milestones.",
-      "Engage with enterprise clients, dental clinics, and partners to discover unmet needs.",
-      "Collaborate with UI/UX and Engineering teams to deliver high-value releases on schedule.",
-      "Track key product telemetry metrics, adoption rates, and customer satisfaction."
-    ],
-    requirements: [
-      "Proven track record managing B2B SaaS or enterprise software products.",
-      "Strong technical literacy — able to converse comfortably with software architects.",
-      "Data-driven mindset with experience in product analytics tools.",
-      "Exceptional leadership, stakeholder management, and written communication."
-    ],
-    niceToHave: [
-      "Prior experience as a software engineer or UI/UX designer.",
-      "Familiarity with Agile Scrum/Kanban tools (Jira, Linear).",
-      "Experience launching HIPAA-compliant software products."
+      "Currently pursuing a degree in Computer Science, IT, or a related discipline.",
+      "Proficiency in SQL and Python.",
+      "Basic understanding of relational database management systems and environment configuration.",
+      "Familiarity with version control (Git/GitHub) and basic cloud or local deployment concepts."
     ]
   }
 ];
 
 export default function CareersPage() {
-  const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [selectedJob, setSelectedJob] = useState<JobRole | null>(null);
   const [activeModalTab, setActiveModalTab] = useState<"description" | "application">("description");
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
@@ -235,10 +138,6 @@ export default function CareersPage() {
     portfolio: "",
     message: ""
   });
-
-  const filteredJobs = selectedCategory === "all"
-    ? jobRoles
-    : jobRoles.filter((job) => job.department === selectedCategory);
 
   const handleOpenApplyModal = (job: JobRole, initialTab: "description" | "application" = "description") => {
     setSelectedJob(job);
@@ -519,40 +418,23 @@ export default function CareersPage() {
             <p className="max-w-2xl mx-auto mt-4 text-gray-600 text-base sm:text-lg leading-relaxed">
               Discover your next career milestone with GPV. Browse our open positions below.
             </p>
-
-            {/* Department Filter Tabs */}
-            <div className="flex flex-wrap justify-center gap-2 mt-8">
-              {[
-                { id: "all", label: "All Departments" },
-                { id: "engineering", label: "Engineering" },
-                { id: "ai", label: "AI & Data Science" },
-                { id: "design", label: "Product Design" },
-                { id: "product", label: "Product Management" },
-              ].map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => setSelectedCategory(tab.id)}
-                  className={`px-5 py-2.5 rounded-full text-xs font-semibold transition-all duration-300 ${
-                    selectedCategory === tab.id
-                      ? "bg-blue-600 text-white shadow-md"
-                      : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-                  }`}
-                >
-                  {tab.label}
-                </button>
-              ))}
-            </div>
           </div>
 
           {/* Job List */}
           <div className="space-y-6">
-            {filteredJobs.map((job) => (
+            {jobRoles.map((job) => (
               <div
                 key={job.id}
                 className="group rounded-3xl border border-gray-200 bg-white p-7 sm:p-8 shadow-sm transition-all duration-300 hover:border-blue-300 hover:shadow-xl flex flex-col lg:flex-row lg:items-center justify-between gap-6"
               >
                 <div className="space-y-3 flex-1">
                   <div className="flex flex-wrap items-center gap-2">
+                    {job.urgentHiring && (
+                      <span className="inline-flex items-center gap-1.5 rounded-full border border-rose-300 bg-gradient-to-r from-rose-600 via-pink-600 to-rose-500 px-3.5 py-1 text-xs font-black uppercase tracking-wider text-white shadow-md animate-pulse">
+                        <Sparkles className="h-3 w-3 fill-white text-white" />
+                        Urgent Hiring
+                      </span>
+                    )}
                     <span className="inline-flex items-center gap-1 rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700">
                       <Building2 className="h-3 w-3" />
                       {job.departmentLabel}
@@ -595,7 +477,7 @@ export default function CareersPage() {
               </div>
             ))}
 
-            {filteredJobs.length === 0 && (
+            {jobRoles.length === 0 && (
               <div className="text-center py-12 text-gray-500 text-sm">
                 No open positions in this department right now. Feel free to submit a general application below!
               </div>
