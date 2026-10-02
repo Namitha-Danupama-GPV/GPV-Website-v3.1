@@ -307,14 +307,14 @@ const techTools: Record<TechTab, { name: string; icon?: string }[]> = {
     { name: "Next.js", icon: "/nextjs-black.png" },
     { name: "Flutter", icon: "/flutter-Logo.png" },
     { name: "HTML5 & CSS3", icon: "/html.png" },
-    { name: ".NET", icon: "/net-framework.png" },
+    { name: ".NET", icon: "/Net-framework.png" },
   ],
   backend: [
     { name: "Node.js", icon: "/nodejs.png" },
     { name: "Python", icon: "/python.png" },
     { name: "Maven", icon: "/maven.png" },
-    { name: "PHP", icon: "/php.png" },
-    { name: "Java", icon: "/java.png" },
+    { name: "PHP", icon: "/PHP.png" },
+    { name: "Java", icon: "/Java.png" },
     { name: "Django", icon: "/django.png" },
     { name: "Express.js", icon: "/express-js.png" },
     { name: "Spring Boot", icon: "/spring-boot.png" },
@@ -332,7 +332,7 @@ const techTools: Record<TechTab, { name: string; icon?: string }[]> = {
     { name: "iOS", icon: "/ios-logo.png" },
     { name: "Android", icon: "/Android.png" },
     { name: "React Native", icon: "/reactnative.png" },
-    { name: "Flutter", icon: "/flutter-logo.png" },
+    { name: "Flutter", icon: "/flutter-Logo.png" },
   ],
   database: [
     { name: "MongoDB", icon: "/mongoDB.png" },
@@ -345,7 +345,7 @@ const techTools: Record<TechTab, { name: string; icon?: string }[]> = {
   uiux: [
     { name: "Adobe XD", icon: "/adobe-xd.png" },
     { name: "Sketch", icon: "/sketchlogo.png" },
-    { name: "Figma", icon: "/figmaLogo.png" },
+    { name: "Figma", icon: "/FigmaLogo.png" },
   ],
   cloud: [
     { name: "AWS", icon: "/aws.png"},
